@@ -1,0 +1,13 @@
+{
+	"name": "Tag Styling",
+	"description": "Give a tag a unique style: header, icon, description",
+	"version": "0.6",
+	"date": "2020-05-20",
+	"author": "JacksiroKe",
+	"author_uri": "https://github.com/JacksiroKe/",
+	"license": "GPLv2",
+	"min_q2a": "1.6",
+	"min_php": "5.4",
+	"load_order": "after_db_init"
+}
+
