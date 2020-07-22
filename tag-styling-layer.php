@@ -33,7 +33,6 @@ class qa_html_theme_layer extends qa_html_theme_base
     {	
         $request = qa_request_part(2);
         
-
         if ($this->template == 'tag')
         {
             $this->tag = qa_db_select_with_pending( qa_db_tag_word_selectspec(qa_request_part(1)));
@@ -86,7 +85,7 @@ class qa_html_theme_layer extends qa_html_theme_base
 	{ 
         if ($this->template == 'tag' || $this->template == 'question')
         {
-            if ($this->tagstyle != null && strlen($this->tagstyle['iconblobid']))
+            if ($this->tagstyle != null && strlen($this->tagstyle['iconblobid']) > 0)
             {
                 $this->output(
                     '<div class="qa-logo">',
@@ -96,6 +95,7 @@ class qa_html_theme_layer extends qa_html_theme_base
                     '</div>'
                 );
             }
+            else qa_html_theme_base::logo();
         }
         else qa_html_theme_base::logo();
 	}
